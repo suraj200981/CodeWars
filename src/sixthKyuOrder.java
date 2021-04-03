@@ -20,8 +20,11 @@ public class sixthKyuOrder {
 
         System.out.println("Initial arr: "+Arrays.toString(splitWordsArr));
 
-        for (int x=0; x<words.length(); x++){
+        for (int x=0; x<splitWordsArr.length; x++){
 
+            for(int j=0; j<splitWordsArr[x].length(); j++){
+
+            }
 
         }
 
