@@ -21,7 +21,7 @@ public class sixthKyuOrder {
 
         String[] splitWordsArr = words.split(" ");
         ArrayList<Integer> numsInWords = new ArrayList<Integer>();
-        HashMap<String, Integer> hashMapWords = new HashMap<String, Integer>();
+        HashMap<Integer, String> hashMapWords = new HashMap<Integer, String>();
 
 
         System.out.println("Initial arr: " + Arrays.toString(splitWordsArr));
@@ -36,7 +36,7 @@ public class sixthKyuOrder {
                 if (flag) {
                     if (Integer.parseInt(String.valueOf(c)) >= 1 || Integer.parseInt(String.valueOf(c)) <= temp.length()) {
                         numsInWords.add(Integer.parseInt(String.valueOf(c))); // i will apply a sorting alg to this
-                        hashMapWords.put(temp, Integer.parseInt(String.valueOf(c))); // store in hashmap
+                        hashMapWords.put(Integer.parseInt(String.valueOf(c)),temp); // store in hashmap
                         break;
                     }
                 }
@@ -60,6 +60,16 @@ public class sixthKyuOrder {
             }
 
             System.out.println(numsInWords);
+
+
+            for (int x =0; x<numsInWords.size(); x++){
+
+                String value =  hashMapWords.get(x+1);
+
+                System.out.print(value+ " ");
+
+            }
+        System.out.println();
 
 
         return null;
