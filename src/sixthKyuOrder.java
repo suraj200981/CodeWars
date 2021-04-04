@@ -14,7 +14,7 @@ public class sixthKyuOrder {
 
     public static void main(String[] args) {
 
-        System.out.println(order("is2 Thi1s T4est 3a"));
+        System.out.println(order("4of Fo1r pe6ople g3ood th5e the2"));
     }
 
     public static String order(String words) {
@@ -43,36 +43,16 @@ public class sixthKyuOrder {
             }
         }
 
+        StringBuilder finalString = new StringBuilder();
         System.out.println("Unordered: " + hashMapWords);
-        int temp1;
-        int temp2;
-            for (int x = 0; x < numsInWords.size() - 1; x++) {
 
-                if (numsInWords.get(x) > numsInWords.get(x + 1)) {
+            for (int x =0; x<hashMapWords.size(); x++){
 
-                    temp1 = numsInWords.get(x + 1);
-                    temp2 = numsInWords.get(x);
-
-                    numsInWords.set(x, temp1);
-                    numsInWords.set(x + 1, temp2);
-
-                }
-            }
-
-            System.out.println(numsInWords);
-
-
-            for (int x =0; x<numsInWords.size(); x++){
-
-                String value =  hashMapWords.get(x+1);
-
-                System.out.print(value+ " ");
+                finalString.append(hashMapWords.get(x + 1)).append(" ");
 
             }
-        System.out.println();
 
-
-        return null;
+        return finalString.toString().trim(); // the .trim() removes spaces at the beginning and end of the string
 
     }
 }
