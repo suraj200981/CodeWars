@@ -19,15 +19,28 @@ public class sixthKyuNumberIsPrime {
         for (int i = 1; i <= 20; i++) {
             System.out.println(i + " is: " + isPrime(i));
         }
-        System.out.println( isPrime(-1));
+        System.out.println(isPrime(-1));
     }
 
     public static boolean isPrime(int num) {
+        boolean primeNumFound = false;
+        int divideBySelf = num / num;
+        int divideBy1 = num / 1;
+        double divideByPrime =Double.valueOf( num) / 2;
 
-        if(num>=1){
-            return true;
+        if (num >= 1) {// first case must pass
+            if (divideBySelf == 1 && divideBy1 == num) { //second case must pass
+
+                if (divideByPrime % 1 != 0) {
+                    return false;
+                }else{
+                    return true;
+                }
+
+            }
         }
-            return false;
 
+
+        return false;
     }
 }
