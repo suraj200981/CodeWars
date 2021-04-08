@@ -16,27 +16,34 @@ is_prime(-1)  false */
 public class sixthKyuNumberIsPrime {
     public static void main(String[] args) {
 
-        for (int i = 1; i <= 20; i++) {
+        for (int i = 1; i <= 10; i++) {
             System.out.println(i + " is: " + isPrime(i));
         }
         System.out.println(isPrime(-1));
     }
 
     public static boolean isPrime(int num) {
-        boolean primeNumFound = false;
         int divideBySelf = num / num;
         int divideBy1 = num / 1;
-        double divideByPrime =Double.valueOf( num) / 2;
+        double divideByPrime = Double.valueOf(num) / 2;
 
         if (num >= 1) {// first case must pass
-            if (divideBySelf == 1 && divideBy1 == num) { //second case must pass
+            if (num == 2) {
 
-                if (divideByPrime % 1 != 0) {
-                    return false;
-                }else{
-                    return true;
+                System.out.println();
+                return true;
+            } else {
+                if (divideBySelf == 1 && divideBy1 == num) { //second case must pass
+
+                    if ((num % 1 != 0)&& num!= 1) {
+                        System.out.println();
+                        return true;
+                    } else {
+                        System.out.println();
+                        return false;
+                    }
+
                 }
-
             }
         }
 
