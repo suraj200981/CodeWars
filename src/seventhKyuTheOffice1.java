@@ -47,7 +47,7 @@ public class seventhKyuTheOffice1 {
         overallHappiness= totalHappiness/meet.length-1;
         System.out.println("Overall Happiness: "+overallHappiness);
 
-        if(overallHappiness<=5){
+        if(overallHappiness<5){
             return "Get Out Now!";
 
         }
