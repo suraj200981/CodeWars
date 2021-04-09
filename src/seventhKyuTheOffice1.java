@@ -20,13 +20,16 @@ public class seventhKyuTheOffice1 {
 
     public static void main(String[] args) {
         Person[] test = new Person[]{
-                new Person("Suraj", 1),
-                new Person("Dave", 2),
-                new Person("Kim", 10),
-                new Person("Darren", 3),
-                new Person("Lilly", 6),
-                new Person("Mel", 4),
-                new Person("Jessica", 9),
+                new Person("tim", 2),
+                new Person("jim ", 9),
+                new Person("randy ", 2),
+                new Person("sandy ", 8),
+                new Person("andy ", 2),
+                new Person("katie ", 6),
+                new Person("laura", 7),
+                new Person("saajid ", 3),
+                new Person("alex ", 2),
+                new Person("john  ", 1),
         };
 
         System.out.println(outed(test, "Dave"));
@@ -38,20 +41,24 @@ public class seventhKyuTheOffice1 {
 
         int overallHappiness=0;
         int totalHappiness=0;
+        int totalPeopleInRoom = meet.length;
 
         for (int x = 0; x < meet.length; x++) {
             System.out.println(meet[x].name + " " + meet[x].happiness);
             totalHappiness += meet[x].happiness;
         }
-
-        overallHappiness= totalHappiness/meet.length-1;
+        System.out.println("Total Happiness: "+totalHappiness);
+        System.out.println("Number of people: "+(totalPeopleInRoom+1));
+        overallHappiness= (int) Math.round((double)totalHappiness/ ((double) (totalPeopleInRoom+1)));
         System.out.println("Overall Happiness: "+overallHappiness);
 
-        if(overallHappiness<5){
+        if(Math.round(overallHappiness)<5){
             return "Get Out Now!";
 
+        }else{
+            return "Nice Work Champ!";
+
         }
-        return "Nice Work Champ!";
     }
 }
 
