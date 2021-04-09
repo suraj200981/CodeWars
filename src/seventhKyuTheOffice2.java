@@ -55,38 +55,55 @@ public class seventhKyuTheOffice2 {
 
 
     public static String boredom(Person[] staff) {
-        int sumOfAssessment=0;
-        int numberOfStaff=0;
-        int finalScore=0;
+        int sumOfAssessment = 0;
+        int numberOfStaff = staff.length;
+        int finalScore = 0;
         for (int x = 0; x < staff.length; x++) {
-            if(staff[x].department.equals("accounts")){
+            if (staff[x].department.equals("accounts")) {
+                sumOfAssessment+= 1;
 
-
-
-            }else if(staff[x].department.equals("finance")){
-
+            } else if (staff[x].department.equals("finance")) {
+                sumOfAssessment+= 2;
             }
-            if(staff[x].department.equals("canteen")){
+            if (staff[x].department.equals("canteen")) {
+                sumOfAssessment+= 10;
 
-            }else if(staff[x].department.equals("regulation")){
-
+            } else if (staff[x].department.equals("regulation")) {
+                sumOfAssessment+= 3;
             }
-            if(staff[x].department.equals("trading")){
-
-            }else if(staff[x].department.equals("change")){
-
+            if (staff[x].department.equals("trading")) {
+                sumOfAssessment+= 6;
+            } else if (staff[x].department.equals("change")) {
+                sumOfAssessment+= 6;
             }
-            if(staff[x].department.equals("IS")){
+            if (staff[x].department.equals("IS")) {
+                sumOfAssessment+= 8;
 
-            }else if(staff[x].department.equals("retail")){
+            } else if (staff[x].department.equals("retail")) {
+                sumOfAssessment+= 5;
 
-            }else if(staff[x].department.equals("cleaning")){
+            } else if (staff[x].department.equals("cleaning")) {
+                sumOfAssessment+= 4;
 
-            }else if(staff[x].department.equals("pissing about")){
+            } else if (staff[x].department.equals("pissing about")) {
+                sumOfAssessment+= 25;
 
             }
         }
 
-        return "What should I do?";
+        finalScore = sumOfAssessment/numberOfStaff;
+        System.out.println("Total number of staff "+ numberOfStaff );
+        System.out.println("Sum of assessment "+ sumOfAssessment );
+        System.out.println("Cumulative score "+ finalScore );
+
+        if(finalScore<=80){
+            return "kill me now";
+        }else if(finalScore < 100){
+            return "i cna handle this";
+        }
+            return "party time!!"; // 100 or over
+
+
+
     }
 }
