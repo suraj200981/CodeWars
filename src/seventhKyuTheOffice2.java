@@ -57,7 +57,7 @@ public class seventhKyuTheOffice2 {
     public static String boredom(Person[] staff) {
         int sumOfAssessment = 0;
         int numberOfStaff = staff.length;
-        int finalScore = 0;
+        double finalScore;
         for (int x = 0; x < staff.length; x++) {
             if (staff[x].department.equals("accounts")) {
                 sumOfAssessment+= 1;
@@ -91,14 +91,14 @@ public class seventhKyuTheOffice2 {
             }
         }
 
-        finalScore = sumOfAssessment/numberOfStaff;
+        finalScore = (double) sumOfAssessment / (double) numberOfStaff;
         System.out.println("Total number of staff "+ numberOfStaff );
         System.out.println("Sum of assessment "+ sumOfAssessment );
-        System.out.println("Cumulative score "+ finalScore );
+        System.out.println("Cumulative score rounded up "+ Math.round(finalScore) );
 
-        if(finalScore<=80){
+        if(Math.round(finalScore)<=80){
             return "kill me now";
-        }else if(finalScore < 100){
+        }else if(Math.round(finalScore) < 100){
             return "i cna handle this";
         }
             return "party time!!"; // 100 or over
