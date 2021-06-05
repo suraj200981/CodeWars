@@ -1,24 +1,17 @@
 function oddOrEven(array) {
 
     var inputArr = new Array();
-
     inputArr = array;
-
     var i;
-    var sum=0;
-    for(i=0; i<=inputArr.length-1; i++) {
+    var sum = 0;
 
+    for (i = 0; i <= inputArr.length - 1; i++) {
         sum += inputArr[i];
-
     }
-
-    if(sum%2){ 
+    if (sum % 2) {
         return 'odd'
-    }else{ 
+    } else {
         return 'even'
-
     }
-
 }
-
-console.log(oddOrEven([0,-1,-5]));
+console.log(oddOrEven([0, -1, -5]));
