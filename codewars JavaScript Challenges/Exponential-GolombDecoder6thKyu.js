@@ -23,11 +23,53 @@ Therefore, for this case, your function should take "001000000101111001010001101
 
 */
 
-console.log(decoder(22));
+console.log(decoder([1,2,3]));
 
 //function
-function decoder(sequence){
-    var newVal =0;
-    newVal += sequence+1 //x+1
-    return (newVal >>> 0).toString(2);
+function decoder(sequence) {
+
+  var text = "";
+  var i;
+  for (i = 0; i < sequence.length; i++) {
+    //converts to string 
+    text += sequence[i] + 1;
+    text.toString();
+
   }
+  var newNumberString = text;
+
+  var finalBinaryValue = "";
+
+  var returningString = "";
+  var bitsInFront="";
+  
+  var x;
+  var y;
+  //            ["01001100100", [1, 2, 3]],
+
+
+  //converts each number to binary
+  for (x = 0; x < newNumberString.length; x++) {
+    //each binary val
+    // console.log(newNumberString.charAt(x));
+    finalBinaryValue+= (newNumberString.charAt(x)>>> 0).toString(2);
+    // console.log("each binary val: "+finalBinaryValue);
+    //putting 00s in front of binary val
+    for (y = 0; y < finalBinaryValue.length-1; y++) {
+      bitsInFront += "0";
+    }
+    // console.log("bits in front: "+bitsInFront);
+    //bringing it all together
+    returningString += bitsInFront +finalBinaryValue;
+    // console.log()
+    // console.log(returningString);
+    // console.log()
+    bitsInFront ="";
+    finalBinaryValue ="";
+  
+  }
+
+ 
+  return returningString;
+
+}
