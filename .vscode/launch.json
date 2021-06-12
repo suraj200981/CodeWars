@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/codewars JavaScript Challenges/SortTheOdd6thKyu.js"
+            "program": "${workspaceFolder}/codewars JavaScript Challenges/codewars JavaScript Challenges/allStarCodeChallenge7thKyu.js"
         }
     ]
 }
